@@ -155,6 +155,9 @@ export const RPC_PROVIDERS = {
     "https://bsc-dataseed3.binance.org",
     "https://bsc-dataseed4.binance.org",
   ],
+  [GNOSIS]: [
+    "https://rpc.gnosischain.com",
+  ],
   [TESTNET]: ["https://data-seed-prebsc-1-s1.binance.org:8545/"],
   [ARBITRUM]: [getDefaultArbitrumRpcUrl()],
   [ARBITRUM_TESTNET]: ["https://rinkeby.arbitrum.io/rpc"],
@@ -178,6 +181,17 @@ export const NETWORK_METADATA: { [chainId: number]: NetworkMetadata } = {
     },
     rpcUrls: RPC_PROVIDERS[MAINNET],
     blockExplorerUrls: ["https://bscscan.com"],
+  },
+  [GNOSIS]: {
+    chainId: "0x" + GNOSIS.toString(16),
+    chainName: "DAI",
+    nativeCurrency: {
+      name: "DAI",
+      symbol: "DAI",
+      decimals: 18,
+    },
+    rpcUrls: RPC_PROVIDERS[GNOSIS],
+    blockExplorerUrls: ["https://rpc.gnosischain.com"],
   },
   [TESTNET]: {
     chainId: "0x" + TESTNET.toString(16),
