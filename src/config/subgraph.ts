@@ -1,4 +1,4 @@
-import { ARBITRUM, AVALANCHE, ETH_MAINNET } from "./chains";
+import { ARBITRUM, AVALANCHE, ETH_MAINNET, GNOSIS } from "./chains";
 import { isDevelopment } from "./env";
 import { getSubgraphUrlKey } from "./localStorage";
 
@@ -15,6 +15,10 @@ const SUBGRAPH_URLS = {
   },
 
   [ETH_MAINNET]: {
+    chainLink: "https://api.thegraph.com/subgraphs/name/deividask/chainlink",
+  },
+
+  [GNOSIS]: {
     chainLink: "https://api.thegraph.com/subgraphs/name/deividask/chainlink",
   },
 };
